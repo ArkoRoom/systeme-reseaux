@@ -1,0 +1,83 @@
+Partie 1 : Navigation et Inspection
+
+Lister les fichiers et répertoires
+
+Listez tous les fichiers et répertoires dans le répertoire /var/log.
+Listez les fichiers avec des détails (permissions, propriétaire, taille, date de modification).
+Affichez les fichiers cachés dans le répertoire /etc.
+Listez les fichiers dans /home en format lisible par l'humain.
+Changer de répertoire
+
+Changez de répertoire pour aller dans /var/log.
+Retournez dans votre répertoire personnel.
+Allez dans le répertoire parent de votre répertoire actuel.
+Retournez dans le répertoire précédent.
+
+cd var/log
+ls
+ls -l
+cd ./etc
+ls -l
+cd ./home
+ls
+cd ./var/log
+cd /
+cd ~
+cd ..
+
+Créer des répertoires
+
+Créez un répertoire cybersec dans votre répertoire personnel.
+Créez plusieurs répertoires en une seule commande : logs, reports, et scripts à l'intérieur de cybersec.
+Créez une structure de répertoires imbriqués 2024/january/week1 dans reports.
+
+mkdir cybersec
+cd cybersec
+mkdir logs reports scripts
+cd reports
+mkdir 2024 
+cd 2024
+mkdir january
+cd january
+mkdir week1
+
+Créer des fichiers
+
+Créez un fichier vide readme.txt dans cybersec.
+Créez plusieurs fichiers vides log1.txt, log2.txt, et log3.txt dans logs.
+Créez un fichier avec une date spécifique.
+
+cd cybersec
+mkdir readme.txt
+cd ./logs
+mkdir log1.txt log2.txt log3.txt
+mkdir -t 01/01/2024 toto.txt
+
+Copier des fichiers
+
+Copiez readme.txt dans le répertoire scripts.
+Copiez tous les fichiers .txt de logs vers reports/2024/january/week1.
+
+cp readme.txt ./scripts
+cp *.txt ./reports/2024/january.week1
+
+Déplacer et renommer des fichiers
+
+Déplacez log1.txt de logs vers scripts et renommez-le en script_log1.txt.
+Renommez readme.txt en README.md.
+
+mv log1.txt ./scripts script_log1.txt
+mv readme.txt readme.md.
+
+Supprimer des fichiers et répertoires
+
+Supprimez le fichier log2.txt dans logs.
+Supprimez le répertoire week1 et tout son contenu.
+Supprimez tous les fichiers .txt dans logs.
+
+cd logs
+rm -r log2.txt
+cd ./week1
+rm -r *
+cd logs
+rm -r *.txt
